@@ -10,7 +10,7 @@ public class TimeManeger : MonoBehaviour
    [Header("Слайдер для времени")] [SerializeField] private Slider TimeSlider = default;
    [Header("Станица загрзуки если игрок не успел")] [SerializeField] private GameObject Page_Lose_Time = default;
    [Header("Позиция для новой страницы")] [SerializeField] private Transform Start = default;
-   [Header("Позиция для новой страницы")] [SerializeField] private Transform Finish = default;
+   [Header("Позиция для старой страницы")] [SerializeField] private Transform Finish = default;
     private void OnValidate()
     {
         if (TimeVariand < 0)

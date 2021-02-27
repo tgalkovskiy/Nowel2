@@ -8,12 +8,14 @@ public class MiniGame1 : MonoBehaviour
 {
    [Header("Клавишы ответов")][SerializeField]private KeyCode[] Code;
    [Header("Количество оборотов винта")][SerializeField]private int CountFulRot = 0;
+   [Header("Крышка")] [SerializeField] private GameObject Panel = default;
    private string[] Simvol = new string[4] {"A", "W", "D", "S"};
    private GameObject NowButtom;
    private Text Text_Buttom;
    private int Index = 0;
    private float Z = 360;
    private int CountRot = 0;
+   private int End_Mini_Game1 = 0;
    public void Bolt_Change(GameObject Buttom)
    {
         Index = 0;
@@ -41,12 +43,18 @@ public class MiniGame1 : MonoBehaviour
                     Index = 0;
                     CountRot += 1;
                     Z = 0;
+                    
                 }
                 Text_Buttom.text = Simvol[Index];
                 if (CountRot >= CountFulRot)
                 {
                     NowButtom.SetActive(false);
                     CountRot = 0;
+                    End_Mini_Game1 += 1;
+                }
+                if (End_Mini_Game1 == 4)
+                {
+                    Panel.SetActive(true);
                 }
             }
 
