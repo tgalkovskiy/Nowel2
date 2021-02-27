@@ -15,9 +15,6 @@ public class PageManeger : MonoBehaviour
     public void VariablePage(int Var)
     {
         StartCoroutine(MovePage(Var));
-        //Page[StartIndexPage].SetActive(false);
-        //Page[Var].SetActive(true);
-        //StartIndexPage = Var;
     }
     IEnumerator MovePage(int Var)
     {
