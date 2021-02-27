@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class MiniGame1 : MonoBehaviour
 {
    [Header("Клавишы ответов")][SerializeField]private KeyCode[] Code;
    [Header("Количество оборотов винта")][SerializeField]private int CountFulRot = 0;
    [Header("Крышка")] [SerializeField] private GameObject Panel = default;
+   [SerializeField] List<GameObject> Var = new List<GameObject>();
+   [SerializeField] private GameObject Buttom_Exit = default;
+   [SerializeField] private Image MainSprite = default;
+
    private string[] Simvol = new string[4] {"A", "W", "D", "S"};
    private GameObject NowButtom;
    private Text Text_Buttom;
@@ -24,8 +29,14 @@ public class MiniGame1 : MonoBehaviour
         Text_Buttom.text = Simvol[Index];
         Z = 0;
    }
+   
+   public void Change_Sprite(int Varible)
+   {
+        Var[Varible].SetActive(true);
+        Buttom_Exit.SetActive(true);
+   }
 
-    private void Update()
+   private void Update()
     {
         if (NowButtom)
         {
