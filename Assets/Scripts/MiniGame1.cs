@@ -11,6 +11,7 @@ public class MiniGame1 : MonoBehaviour
    [Header("Количество оборотов винта")][SerializeField]private int CountFulRot = 0;
    [Header("Крышка")] [SerializeField] private GameObject Panel = default;
    [SerializeField] List<GameObject> Var = new List<GameObject>();
+   [SerializeField] List<GameObject> Bottum_Clouse = new List<GameObject>();
    [SerializeField] private GameObject Buttom_Exit = default;
    [SerializeField] private Image MainSprite = default;
 
@@ -34,6 +35,10 @@ public class MiniGame1 : MonoBehaviour
    {
         Var[Varible].SetActive(true);
         Buttom_Exit.SetActive(true);
+        for(int i =0; i< Bottum_Clouse.Count; i++)
+        {
+            Bottum_Clouse[i].SetActive(false);
+        }
    }
 
    private void Update()
