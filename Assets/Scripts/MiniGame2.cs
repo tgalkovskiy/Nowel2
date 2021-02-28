@@ -44,23 +44,23 @@ public class MiniGame2 : MonoBehaviour
     
     public void Resech()
     {
-        if(One == 156)
+        if(One == 192)
         {
             Count += 1;
         }
-        if(Two == 2)
+        if(Two == 110)
         {
             Count += 1;
         }
-        if(Tree == 1)
+        if(Tree == 226)
         {
             Count += 1;
         }
-        if (Four == 3)
+        if (Four == 764)
         {
             Count += 1;
         }
-        if (Five == 3)
+        if (Five == 694)
         {
             Count += 1;
         }
