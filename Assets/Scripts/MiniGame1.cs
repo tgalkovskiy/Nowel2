@@ -14,7 +14,7 @@ public class MiniGame1 : MonoBehaviour
    [SerializeField] List<GameObject> Bottum_Clouse = new List<GameObject>();
    [SerializeField] private GameObject Buttom_Exit = default;
    [SerializeField] private Image MainSprite = default;
-
+    [SerializeField] private GameObject[] Buttom = default;
    private string[] Simvol = new string[4] {"A", "W", "D", "S"};
    private GameObject NowButtom;
    private Text Text_Buttom;
@@ -70,7 +70,11 @@ public class MiniGame1 : MonoBehaviour
                 }
                 if (End_Mini_Game1 == 4)
                 {
-                    Panel.SetActive(true);
+                    Panel.SetActive(false);
+                    for(int i =0; i < Buttom.Length; i++)
+                    {
+                        Buttom[i].SetActive(true);
+                    }
                 }
             }
 
