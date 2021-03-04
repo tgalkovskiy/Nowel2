@@ -11,18 +11,27 @@ public class TimeManeger : MonoBehaviour
    [Header("Станица загрзуки если игрок не успел")] [SerializeField] private GameObject Page_Lose_Time = default;
    [Header("Позиция для новой страницы")] [SerializeField] private Transform Start = default;
    [Header("Позиция для старой страницы")] [SerializeField] private Transform Finish = default;
+    private float TimeG=0;
+    private void Awake()
+    {
+        TimeG = TimeVariand;
+    }
+    private void OnDisable()
+    {
+        TimeG = TimeVariand;
+    }
     private void OnValidate()
     {
-        if (TimeVariand < 0)
+        if (TimeG < 0)
         {
-            TimeVariand = 0;
+            TimeG = 0;
         }
         TimeSlider.maxValue = TimeVariand;
     }
 
     private void Update()
     {
-        if (TimeVariand > 0)
+        if (TimeG > 0)
         {
             StartCoroutine(MinusTime());
         }
@@ -30,9 +39,9 @@ public class TimeManeger : MonoBehaviour
     IEnumerator MinusTime()
     {
         yield return new WaitForSeconds(1f);
-        TimeVariand -= Time.deltaTime;
-        TimeSlider.value = TimeVariand;
-        if (TimeVariand <= 0)
+        TimeG -= Time.deltaTime;
+        TimeSlider.value = TimeG;
+        if (TimeG <= 0)
             {
                 Page_Lose_Time.SetActive(true);
                 Page_Lose_Time.transform.DOMove(Start.transform.position, 1f);
