@@ -60,7 +60,7 @@ public class MiniGame2 : MonoBehaviour
         {
             Count += 1;
         }
-        if (Five == 694)
+        if (Five == 744)
         {
             Count += 1;
         }
