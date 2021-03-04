@@ -15719,7 +15719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -722, y: 0}
+  m_AnchoredPosition: {x: -719, y: 0}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &486769439
@@ -24786,6 +24786,7 @@ MonoBehaviour:
   Page_Lose_Time: {fileID: 2111157080}
   Start: {fileID: 19431203}
   Finish: {fileID: 648316567}
+  PageManeger: {fileID: 0}
 --- !u!1 &790823511
 GameObject:
   m_ObjectHideFlags: 0
@@ -50356,6 +50357,7 @@ MonoBehaviour:
   Page_Lose_Time: {fileID: 1468166957}
   Start: {fileID: 19431203}
   Finish: {fileID: 648316567}
+  PageManeger: {fileID: 1153791137}
 --- !u!82 &1711341827
 AudioSource:
   m_ObjectHideFlags: 0

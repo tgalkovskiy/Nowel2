@@ -11,6 +11,7 @@ public class TimeManeger : MonoBehaviour
    [Header("Станица загрзуки если игрок не успел")] [SerializeField] private GameObject Page_Lose_Time = default;
    [Header("Позиция для новой страницы")] [SerializeField] private Transform Start = default;
    [Header("Позиция для старой страницы")] [SerializeField] private Transform Finish = default;
+    [SerializeField] private PageManeger PageManeger;
     private float TimeG=0;
     private void Awake()
     {
